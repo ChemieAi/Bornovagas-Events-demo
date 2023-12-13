@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #469276; /* Bejimsi renk */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo-container img {
+    width: 140px; /* Logo genişliği */
+    height: 140px; /* Logo yüksekliği */
+    margin-right: 20px;
+}
+.logo-container h1{
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.user-buttons{
+    margin-right: 50px;
+    display: flex;
+}
+.user-buttons button {
+    margin-left: 10px;
+    padding: 20px 40px; /* Buton içeriği içindeki boşlukları artırarak boyutu büyütür */
+    border: none;
+    border-radius: 20px; /* Yuvarlak kenarlıklar */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Geçiş süresi ve hızı */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.user-buttons button img {
+    width: 30px; /* İstediğiniz genişlik */
+    height: 30px; /* İstediğiniz yükseklik */
+    margin-right: 10px; /* Yazıdan fotoğrafa bir boşluk bırakır */
+}
+
+/* Hover effect */
+.hover-effect{
+    background-color: rgb(118, 152, 172); 
+}
+.hover-effect:hover {
+    background-color: #ffffff; /* Gri renk veya istediğiniz renk */
+    transition-duration: 0.2s;
+    background-position: right center;
+    cursor: pointer;
+    transform: scale(1.1); /* Butonun boyutunu hafifçe büyütme */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-top: 0px; 
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    animation: slideAnimation 4s ease infinite; 
+}
+
+@keyframes slideAnimation {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    25%, 75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+}
