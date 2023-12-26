@@ -63,17 +63,24 @@ body {
 
 .slideshow-container {
     max-width: 100%;
-    position: relative;
-    margin-top: 0px; 
+    position: absolute;
     overflow: hidden;
 }
-
-.mySlides {
+.slides {
+    display: flex;
+}
+.slides input{
     display: none;
-    animation: slideAnimation 4s ease infinite; 
 }
 
-@keyframes slideAnimation {
+.slide {
+    /*display: none;
+    animation: slideAnimation 4s ease infinite; */
+    transition: 2s;
+}
+
+
+/*@keyframes slideAnimation {
     0%, 100% {
         opacity: 0;
         transform: translateX(-100%);
@@ -82,9 +89,28 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
-}
+} */
 
 .slideshow-container img {
     width: 100%;
     height: auto;
+}
+
+.navigation-manual{
+    position: relative;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 1s;
+
+
 }
